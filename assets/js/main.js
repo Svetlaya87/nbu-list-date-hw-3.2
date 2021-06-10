@@ -120,11 +120,14 @@
         for (i=0; i<arr.length; i++){
             arr[i].repaydate=arr[i].repaydate.split('-').reverse().join('-');
             arr[i].sumPerDay= ( ( arr[i].sumPerDay )/10**9 ).toFixed(2);
-            console.log(` ${arr[i].repaydate}-${arr[i].sumPerDay} млрд. грн`)
+            console.log(` ${arr[i].repaydate} - ${arr[i].sumPerDay} млрд. грн`)
 
             tr=resBigTable.insertRow();
             td = tr.insertCell();
-            td.innerText=`${arr[i].repaydate}-`;
+            td.innerText=`${arr[i].repaydate}`;
+
+            td = tr.insertCell();
+            td.innerText=`-`;
 
             td = tr.insertCell();
             td.innerText=`${arr[i].sumPerDay} млрд. грн`;
