@@ -1,0 +1,31 @@
+* {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+.container {
+    min-width: 540px;
+    font-size: 30px;
+}
+
+.btn, .form-control {
+    font-size: 1.5rem;
+}
+
+
+h1, h3 {
+    font-size: calc(1.9rem + 1.5vw);
+    
+}
+
+p {font-size: calc(0.5rem + 1.5vw);
+}
+
+
+input:invalid {
+    border-color: rgba(255, 0, 200, 0.603);
+  }
+
+  input:valid {
+    border-color: rgba(2, 197, 44, 0.76);
+}  
+
