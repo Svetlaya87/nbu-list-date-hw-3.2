@@ -127,7 +127,7 @@
             td.innerText=`${arr[i].repaydate}`;
 
             td = tr.insertCell();
-            td.innerText=`-`;
+            td.innerText=` - `;
 
             td = tr.insertCell();
             td.innerText=`${arr[i].sumPerDay} млрд. грн`;

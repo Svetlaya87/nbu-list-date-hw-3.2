@@ -29,3 +29,6 @@ input:invalid {
     border-color: rgba(2, 197, 44, 0.76);
 }  
 
+tr, td {
+    padding: 6px 10px;
+}
