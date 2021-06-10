@@ -9,11 +9,11 @@
 
         let data = JSON.parse(xhr.responseText);
 
-        console.log(data);
+        
 
         let currentDate= new Date();
         currentDate = currentDate.toLocaleDateString().split('.').reverse().join('-');
-        console.log(currentDate);
+        
 
 
         let debt = 0;
@@ -53,9 +53,7 @@
 
         }
 
-        console.log(`Гос. долг Украниы ${debt/1_000_000} млн. грн`);
-        console.log(listOfDebts);
-        console.log(`listOfDebts ${listOfDebts[0].repaydate}`);
+       
 
         listOfDebts=listOfDebts.map(item => ({
             sum: item.attraction,
@@ -115,6 +113,13 @@
             
         }
 
+        console.log(listOfDebts);
+
+        for (i=0; i<arr.length; i++){
+            arr[i].repaydate=arr[i].repaydate.split('-').reverse().join('-');
+            arr[i].sumPerDay= ( ( arr[i].sumPerDay )/10**9 ).toFixed(2);
+            console.log(` ${arr[i].repaydate}-${arr[i].sumPerDay} млрд. грн`)
+        }
 
         
 
@@ -124,6 +129,8 @@
             for(let i=0; i<arr.length; i++) {
               let div = document.createElement('div');
               div.append(i);
+
+
               result.push(`Дата выплаты ${arr[i].repaydate}. Сумма выплаты ${arr[i].sumPerDay}`);
             }
           
@@ -145,8 +152,8 @@
 
        
 
-        console.log(listOfDebts);
-        console.log(arr);
+        
+        //console.log(arr);
         
 
 
