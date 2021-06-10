@@ -115,14 +115,25 @@
 
         console.log(listOfDebts);
 
+        let tr, td;
+
         for (i=0; i<arr.length; i++){
             arr[i].repaydate=arr[i].repaydate.split('-').reverse().join('-');
             arr[i].sumPerDay= ( ( arr[i].sumPerDay )/10**9 ).toFixed(2);
             console.log(` ${arr[i].repaydate}-${arr[i].sumPerDay} млрд. грн`)
+
+            tr=resBigTable.insertRow();
+            td = tr.insertCell();
+            td.innerText=`${arr[i].repaydate}-`;
+
+            td = tr.insertCell();
+            td.innerText=`${arr[i].sumPerDay} млрд. грн`;
+
+
         }
 
         
-
+        /*
         function getListContent() {
             let result = [];
           
@@ -131,7 +142,7 @@
               div.append(i);
 
 
-              result.push(`Дата выплаты ${arr[i].repaydate}. Сумма выплаты ${arr[i].sumPerDay}`);
+              result.push(`${arr[i].repaydate}-${arr[i].sumPerDay} млрд. грн`);
             }
           
             return result;
