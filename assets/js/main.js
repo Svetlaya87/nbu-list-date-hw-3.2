@@ -113,7 +113,7 @@
             
         }
 
-        console.log(listOfDebts);
+        //console.log(listOfDebts);
 
         let tr, td;
 
