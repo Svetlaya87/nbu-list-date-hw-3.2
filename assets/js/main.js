@@ -113,6 +113,12 @@
             
         }
 
+        arr.push({ 
+            sumPerDay: accSum=accSum.toFixed(2),
+            repaydate: listOfDebts[listOfDebts.length-1].repaydate,
+            paydate: listOfDebts[listOfDebts.length-1].paydate
+        });
+
         //console.log(listOfDebts);
 
         let tr, td;
